@@ -61,22 +61,27 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function exampleResultsFunction()
 	{
 		let result;
+		let url;
 		if(Variable1 > Variable2 && Variable1 > Variable3)
 		{ 
 		result = "Christina Yang";
+		url = "https://upload.wikimedia.org/wikipedia/commons/d/d8/Cristina_Yang.jpg";	
 		}
 
 		else if(Variable2 > Variable1 && Variable2 > Variable3)
 		{
 		result = "Meredith Grey";
+		url = "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Greys-Anatomy-Season-7-Promo-9.jpg/220px-Greys-Anatomy-Season-7-Promo-9.jpg";
 		}
 
 		else if(Variable3 > Variable1 && Variable3 > Variable2)
 		{
 		result =  "Derek Shepard";
+		url = "https://upload.wikimedia.org/wikipedia/en/b/b4/Dr._Derek_Shepherd.jpg";
 		}
 		
 		document.getElementById("endResults").innerHTML = "Your final result is: " + result;
+		document.getElementById("resultsButtonImg").src = url;
 		resetVariables();
 	}
 	
@@ -120,7 +125,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <!--Landing page content.-->
   <div id="content" class="w3-container">
   	<!--Header!-->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-turquoise">
 		<h1>Which Grey's Anatomy Character Are You?</h1>
 	</div>
 	
@@ -134,7 +139,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   
 <!--FIRST SUBPAGE-->
 <div id="one" class="page">
-	<div id="header2" class="w3-container w3-flat-carrot">
+	<div id="header2" class="w3-container w3-flat-turquoise">
 		<h1>Question 1</h1>
 	</div>
 	
@@ -155,7 +160,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   
 <!--SECOND SUBPAGE-->
 <div id="two" class="page">
-	<div id="header3" class="w3-container w3-flat-carrot">
+	<div id="header3" class="w3-container w3-flat-turquoise">
 		<h1>Question 2 </h1>
 	</div>
 	
@@ -176,7 +181,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   
 <!--THIRD SUBPAGE-->
 <div id="three" class="page">
-	<div id="header4" class="w3-container w3-flat-carrot">
+	<div id="header4" class="w3-container w3-flat-turquoise">
 		<h1>Question 3 </h1>
 	</div>
 	
@@ -199,7 +204,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	  
 <!--LAST SUBPAGE-->
 <div id="finalpage" class="page">
-	<div id="finalheader" class="w3-container w3-flat-carrot">
+	<div id="finalheader" class="w3-container w3-flat-turquoise">
 		<h1>You are ...</h1>
 	</div>
 	
@@ -207,6 +212,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     
 	  <div id="finalcontent" class="w3-container">
 		  <p id="endResults">Find out your character</p>
+			<img id="resultsButtonImg" src="" alt="">
 	  </div>
   
   <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click here! </a>
@@ -218,7 +224,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   
   
 <!--Footer!-->
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-flat-turquoise">
 	<p>Created by Alexis Scott! Hope you enjoy!</p>
 </footer>
 </div>
