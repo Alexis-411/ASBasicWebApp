@@ -35,55 +35,56 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!--Javascript code.-->
 <script>
-	var exampleVariable1 = 0;
-	var exampleVariable2 = 0;
-	var exampleVariable3 = 0;
-	
-	function exampleFunction1()
+	var Variable1 = 0;
+	var Variable2 = 0;
+	var Variable3 = 0;
+
+	function Increment1()
 	{
-		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 + exampleVariable2;
-		
-		alert("You just ran an addition function!");
-		console.log("Addition function was run.");
+	Variable1 = Variable1 + 1;
+	}
+
+	function Increment2()
+	{
+	Variable2 = Variable2 + 1;
+	}
+
+	function Increment3()
+	{
+	Variable3 = Variable3 + 1;
 	}
 	
-	function exampleFunction2()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 * exampleVariable2;
-		
-		alert("You just ran a multiplication function!");
-		console.log("Multiplication function was run.");
-	}
 	
-	function exampleFunction3()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 ** exampleVariable2;
-		
-		alert("You just ran an exponent function!");
-		console.log("Exponent function was run.");
-	}
+	
+	
 	
 	function exampleResultsFunction()
 	{
-		document.getElementById("endResults").innerHTML = "Your final result is: " + exampleVariable3;
+		String Result
+		if(Variable1 > Variable2 && Variable1 > Variable3)
+		{ 
+		Result = "Christina Yang";
+		}
+
+		else if(Variable2 > Variable1 && Variable2 > Variable3)
+		{
+		Result = "Meredith Grey";
+		}
+
+		else if(Variable3 > Variable1 && Variable3 > Variable2)
+		{
+		Result =  "Derek Shepard";
+		}
+		
+		document.getElementById("endResults").innerHTML = "Your final result is: " + Result;
 		resetVariables();
 	}
 	
 	function resetVariables()
 	{
-		exampleVariable1 = 0;
-		exampleVariable2 = 0;
-		exampleVariable3 = 0;
+		Variable1 = 0;
+		Variable2 = 0;
+		Variable3 = 0;
 	}
 </script>
   
@@ -145,9 +146,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 
       
-  <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Winner</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Strong</a>
-  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Attractive</a>
+  <a href="#two" onclick="Increment1();" class="w3-btn w3-grey">Winner</a>
+  <a href="#two" onclick="Increment2();" class="w3-btn w3-grey">Strong</a>
+  <a href="#two" onclick="Increment3();" class="w3-btn w3-grey">Attractive</a>
     
   </center>
 </div>  
@@ -166,9 +167,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 
       
-  <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Cardio</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">General</a>
-  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Neuro</a>
+  <a href="#three" onclick="Increment1();" class="w3-btn w3-grey">Cardio</a>
+  <a href="#three" onclick="Increment2();" class="w3-btn w3-grey">General</a>
+  <a href="#three" onclick="Increment3();" class="w3-btn w3-grey">Neuro</a>
     
   </center>
 </div>  
@@ -187,9 +188,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 
       
-  <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Workaholic</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Leader</a>
-  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Specialist</a>
+  <a href="#finalpage" onclick="Increment1();" class="w3-btn w3-grey">Workaholic</a>
+  <a href="#finalpage" onclick="Increment2();" class="w3-btn w3-grey">Leader</a>
+  <a href="#finalpage" onclick="Increment3();" class="w3-btn w3-grey">Specialist</a>
     
   </center>
 </div>  
@@ -205,13 +206,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <center>
     
 	  <div id="finalcontent" class="w3-container">
-		  <p id="endResults">FINAL PAGE CONTENT GOES HERE</p>
+		  <p id="endResults">Find out your character</p>
 	  </div>
   
-  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
-    <br>
-    <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
-  </a>
+  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click here! </a>
   <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
     
   </center>
